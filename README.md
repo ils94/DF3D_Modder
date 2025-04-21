@@ -24,7 +24,7 @@ python DF3D_Audio_Extractor.py
 ```
 
 - Input: `sharedassets0.assets`
-- Output: `extracted_audio/clip_name.ogg`
+- Output: `extracted_audio/audio_name.ogg`
 
 ### DF3D_Audio_Replacer.py
 
@@ -34,7 +34,7 @@ Replaces the audio clips in `sharedassets0.assets` with files from the `extracte
 python DF3D_Audio_Replacer.py
 ```
 
-- Input: `sharedassets0.assets`, `audio_folder/`
+- Input: `sharedassets0.assets`, `audio_folder`
 - Output: `output/sharedassets0.assets`
 
 ## ⚠️ Notes
