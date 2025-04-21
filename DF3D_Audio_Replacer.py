@@ -2,8 +2,8 @@ import UnityPy
 import os
 
 # Path to the Unity .assets or .bundle file
-asset_file_path = "sharedassets0.assets"  # Path to your .assets file
-audio_folder = "audio_folder"  # Path to your folder with the audio files
+asset_file_path = "original_assets/sharedassets0.assets"  # Path to your .assets file
+audio_folder = "extracted_audios"  # Path to your folder with the audio files
 output_dir = "output"  # Directory where the modified file will be saved
 os.makedirs(audio_folder, exist_ok=True)
 os.makedirs(output_dir, exist_ok=True)  # Ensure the output directory exists
