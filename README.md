@@ -4,7 +4,7 @@ This project includes two Python scripts that simplify the extraction and replac
 
 ## 📁 Features
 
--   ✅ Extract all `.Ogg audio files` assets from a Unity `.assets` file (e.g., `sharedassets0.assets`)
+-   ✅ Extract all `.ogg audio files` assets from a Unity `.assets` file (e.g., `sharedassets0.assets`)
 -   ✅ Replace existing audio clips with custom `.ogg` files based on matching names
 -   ✅ Fully automated, no manual importing required
     
