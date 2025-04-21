@@ -10,15 +10,11 @@ os.makedirs(output_dir, exist_ok=True)
 env = UnityPy.load(asset_file_path)
 
 
-def detect_audio_format(data: bytes) -> tuple[str, bytes]:
+def detect_audio_format(data: bytes) -> tuple[str | None, bytes]:
     header = data[:64]
     if b'OggS' in header:
         return "ogg", data
-    elif b'RIFF' in data and b'WAVE' in data:
-        riff_index = data.find(b'RIFF')
-        if riff_index >= 0:
-            return "wav", data[riff_index:]
-    return "bin", data
+    return None, data
 
 
 # Iterate through all objects in the file
@@ -35,12 +31,9 @@ for obj in env.objects:
             # Detect file extension
             ext, clean_data = detect_audio_format(raw_data)
 
-            # I cannot for the life of me make it work with .WAV. When I try to replace them, they just do not work in-game,
-            # and all .wav file audio is muted, so I will be skipping them for now.
-
-            # Skip extraction if the format is WAV
-            if ext == "wav":
-                print(f"Skipping extraction of WAV audio: {name}")
+            # Skip non-OGG audio
+            if ext is None:
+                print(f"Skipping non-OGG audio: {name}")
                 continue
 
             safe_name = f"{name}.{ext}"
