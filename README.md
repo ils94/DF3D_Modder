@@ -15,7 +15,7 @@ This project includes two Python scripts that simplify the extraction and replac
 
 ## 📜 Scripts
 
-### `DF3D_Audio_Extractor.py`
+### DF3D_Audio_Extractor.py
 
 Extracts all `AudioClip` objects from the specified Unity `.assets` file and saves them as `.ogg` files.
 
@@ -26,7 +26,7 @@ python DF3D_Audio_Extractor.py
 - Input: `sharedassets0.assets`
 - Output: `extracted_audio/clip_name.ogg`
 
-### `DF3D_Audio_Replacer.py`
+### DF3D_Audio_Replacer.py
 
 Replaces the audio clips in `sharedassets0.assets` with files from the `extracted_audio` folder. File names must match the original clip names.
 
