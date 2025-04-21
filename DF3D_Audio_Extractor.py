@@ -30,4 +30,4 @@ for obj in env.objects:
             print(f"Audio saved: {output_path}")
 
         except Exception as e:
-            print(f"❌ Failed to extract object ID {obj.path_id}: {e}")
+            print(f"Failed to extract object ID {obj.path_id}: {e}")
