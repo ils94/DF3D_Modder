@@ -14,9 +14,9 @@ for obj in env.objects:
     if obj.type.name == "AudioClip":
         try:
             name = obj.peek_name() or f"clip_{obj.path_id}"
+
             # Use ".ogg" as the extension for extracted audio files
-            safe_name = f"{name}.ogg"
-            output_path = os.path.join(output_dir, safe_name)
+            output_path = os.path.join(output_dir, f"{name}.ogg")
 
             # Get raw data from the AudioClip
             raw_data = obj.get_raw_data()

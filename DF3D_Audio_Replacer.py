@@ -17,8 +17,8 @@ for obj in env.objects:
         try:
             # Get the name of the AudioClip
             name = obj.peek_name() or f"clip_{obj.path_id}"
-            safe_name = f"{name}.ogg".replace("/", "_").replace("\\", "_")
-            audio_path = os.path.join(audio_folder, safe_name)
+
+            audio_path = os.path.join(audio_folder, f"{name}.ogg")
 
             # Check if a matching audio file exists in the folder
             if os.path.exists(audio_path):
