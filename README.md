@@ -50,3 +50,9 @@ Place the **original** `sharedassets0.assets` file in the `original_assets` fold
 -   File names must **exactly match** the original `AudioClip` names for replacement to work.
 -   Always back up your original game files before modding.
 - `.wav` files are not supposed to be in the game assets. If there are any in there, it's because they were compiled into the game's final binary by mistake.
+
+## Compiled Version
+
+If you prefer an easier-to-use tool, just download the compiled `.exe`:
+
+[Download](https://github.com/ils94/DF3D_Modder/releases/download/v1/df3dmodder.zip)
