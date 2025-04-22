@@ -3,6 +3,7 @@ from tkinter import filedialog, messagebox, ttk
 import threading
 import extractor
 import replacer
+import os
 
 
 def center_window(root, width, height):
@@ -15,9 +16,14 @@ def center_window(root, width, height):
 
 def create_interface():
     root = tk.Tk()
+
     root.title("DF3D Modder")
     root.resizable(False, False)
     window_width, window_height = 500, 200
+
+    if os.path.isfile("icon.ico"):
+        root.iconbitmap("icon.ico")
+
     center_window(root, window_width, window_height)
 
     # Grid config
